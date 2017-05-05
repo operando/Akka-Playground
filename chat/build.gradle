@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+defaultTasks 'run'
+
+sourceCompatibility = 1.8
+
+mainClassName = 'con.os.operando.akka.chat.Client'
+//mainClassName = 'con.os.operando.akka.chat.Server'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.typesafe.akka:akka-actor_2.11:2.5.1'
+    compile 'com.typesafe.akka:akka-remote_2.11:2.5.1'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
